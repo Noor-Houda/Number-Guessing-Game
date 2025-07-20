@@ -28,7 +28,7 @@ function getBestScore() {
 }
 function displayRounds() {
   getBestScore();
-  let rounds = getRounds();
+  const rounds = getRounds();
   const tableBody = document
     .getElementById("roundsTable")
     .getElementsByTagName("tbody")[0];

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game is fun!</title>
+    <link rel="stylesheet" href="../CSS/game.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../JS/game.js"></script>
+  </head>
+  <body onload="jeux()">
+    <div id="title">
+      <div id="atmp">
+        <span>counter:</span>
+        <span id="nbr">0</span>
+      </div>
+      <div id="score">
+        <span>score:</span>
+        <span id="score_count">0</span>
+      </div>
+      <div id="score_display">
+        
+      </div>
+      <div id="timer">
+        <span>timer:</span>
+        <span id="time">
+            <label id="min">00</label>
+            <label>:</label>
+            <label id="sec">00</label>
+        </span>
+      </div>
+    </div>
+    <div id="result">
+      <span id="star">* * *</span>
+    </div>
+    <div id="history">
+      <span >  </span>
+    </div>
+    <div id="inp">
+      <input type="number" name="input" class="input" id="type" maxlength="3" minlength="1"/>
+      <input type="button" value="Restart" class="input" id="bun" onclick="restart()" />
+      <input type="button" value="Quit Round" class="input" id="inp2" onclick="endRound(); window.location.href='score_bord.html'" />
+    </div>
+  </body>
+</html>

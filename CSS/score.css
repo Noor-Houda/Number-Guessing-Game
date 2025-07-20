@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../Images/when_city_sleeps.jpg");
+  background-size: cover;
+  font-family: "Silkscreen", sans-serif;
+  font-style: normal;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: [first] 30% [second] 25% [third] 25% [forth] auto [fifth]  ;
+  align-items: center;
+  justify-items: center;
+}
+h1 {
+  text-align: center;
+  color: white;
+  grid-row:first/second;
+  padding-top: 5%;
+  font-size: 80px;
+  
+}
+#back{
+  background-color: white;
+  color:darkblue;
+  padding: 1%;
+  box-shadow: 3px 3px darkblue;
+  grid-row:second/third;
+}
+#back:hover{
+  background-color:darkslateblue;
+  color: ghostwhite;
+  box-shadow: 3px 3px ghostwhite;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    width: 80%;
+
+}
+#roundsTable{
+  grid-row: forth/fifth;
+  background-color: dimgrey;
+  color: white;
+}
+#bestRoundTable{
+  background-color:goldenrod;
+  grid-row:third/forth ;
+  color: whitesmoke;
+}
+table, th, td {
+    border: 1px solid white;
+    
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+    
+}

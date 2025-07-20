@@ -1,0 +1,117 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Silkscreen", sans-serif;
+  font-style: normal;
+  cursor: url("../Images/mouse.png"), default;
+
+  display: grid;
+  grid-template-rows: [head]35% [result_area]80% [display_area]auto [input_area]30% [end_rows];
+  grid-template-columns: [count_area_start]10% [middle_area]77% [timer_area]13% [end_cols];
+}
+#title {
+  background-color:ghostwhite;
+
+  grid-row: head / result_area;
+  grid-column: count_area_start / end_cols;
+
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 1 10% 2 10% 3 10% 4 auto 5 10% 6 ;
+  align-items: center;
+  text-align: center;
+}
+#atmp {
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  grid-column: 1 / 2;
+}
+#score {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+}
+#score_display {
+  grid-column: 4/5;
+}
+#nbr,
+#time,
+#score_count {
+  background-color:lavender;
+  border-radius: 10%;
+
+  padding: 5%;
+  margin: 5%;
+
+  display: flex;
+}
+#timer {
+  display: flex;
+  align-items: center;
+  grid-column: 5 / 6;
+
+}
+#result {
+  background-color:darkslateblue;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-row: result_area / display_area;
+  grid-column: count_area_start / end_cols;
+}
+#history {
+  margin: 2%;
+
+  grid-row: display_area / input_area;
+  grid-column: middle_area / timer_area;
+}
+
+#inp {
+  grid-row: input_area / end_rows;
+  grid-column: count_area_start / end_cols;
+
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 75% 20%;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+}
+#bun:hover{
+  background-color: darkslateblue;
+  box-shadow: 3px 3px darkblue;
+  color: white;
+}
+#inp2{
+  background-color:khaki;
+  box-shadow: 3px 3px rgb(165, 157, 87);
+  font-size: large;
+}
+#inp2:hover{
+  background-image: url("../Images/when_city_sleeps.jpg");
+  background-size:cover;
+  color: lightgray;
+  box-shadow: 3px 3px grey;
+  font-size: large;
+}
+.input {
+  height: 70%;
+  margin: 2%;
+  font-size: medium;
+  background-color:lavender;
+  box-shadow: 2px 2px darkslateblue;
+  border: none;
+  font-family: "Silkscreen", sans-serif;
+  font-style: normal;
+}

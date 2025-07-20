@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+#div {
+  padding: 5%;
+  text-align: center;
+
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 400;
+  font-size: larger;
+  font-style: normal;
+}
+.t {
+  opacity: 0;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+    font-size: larger;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.t:nth-of-type(1) {
+  animation: loading 2s 1s 1;
+}
+.t:nth-of-type(2) {
+  animation: loading 2s 3s 1;
+  color: khaki;
+}
+.t:nth-of-type(3) {
+  animation: loading 2s 2s 1;
+  
+}

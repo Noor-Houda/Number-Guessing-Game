@@ -1,16 +1,16 @@
 
-var end = false;
-var seconds = 0;
-var minutes = 0;
-var score = 0;
-var nbr_iteration = 0;
-var res;
-var input_box;
-var a;
-var b;
-var timer_started = false;
-var timeout_val;
-var number;
+let end = false;
+let seconds = 0;
+let minutes = 0;
+let score = 0;
+let nbr_iteration = 0;
+let res;
+let input_box;
+let a;
+let b;
+let timer_started = false;
+let timeout_val;
+let number;
 /*-------------------------------------------------------*/
 function timer() {
   increment();
@@ -42,7 +42,7 @@ function saveRounds(rounds) {
 }
 
 function addRound(a,b,counter,score, time) {
-  let rounds = getRounds();
+  const rounds = getRounds();
   const round = {a,b,counter,score,time};
   rounds.push(round);
   saveRounds(rounds);
@@ -51,11 +51,11 @@ function clearRounds() {
   localStorage.removeItem("rounds");
 }
 
-function endRound(){
+function _endRound(){
   addRound(a, b, nbr_iteration, score , minutes + ":" + seconds);
 }
 /*-------------------------------------------------------*/
-function restart() {
+function _restart() {
   clearRounds();
   input_box.value="";
   nbr_iteration = 0;
@@ -70,12 +70,12 @@ function restart() {
 /*-------------------------------------------------------*/
 
 function nb_aleatoire(min, max) {
-  var nb = min + (max - min + 1) * Math.random();
+  let nb = min + (max - min + 1) * Math.random();
   return Math.floor(nb);
 }
 
 function saisie_x() {
-  var x = prompt("Donner le min:", 0);
+  let x = prompt("Donner le min:", 0);
   while (isNaN(x) || x < 0) {
     alert("❌ Valeur incorrect! ❌");
     x = prompt("Donner le min:", 0);
@@ -84,7 +84,7 @@ function saisie_x() {
 }
 
 function saisie_y() {
-  var y = prompt("Donner le max:", 100);
+  let y = prompt("Donner le max:", 100);
   while (isNaN(y) || y > 100) {
     alert("❌ Valeur incorrect! ❌");
     y = prompt("Donner le max:", 100);

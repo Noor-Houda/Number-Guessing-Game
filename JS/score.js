@@ -4,7 +4,7 @@ function getRounds() {
 }
 
 function getBestScore() {
-  let rounds = getRounds();
+  const rounds = getRounds();
   let best = rounds[0];
   let i = 0;
   rounds.forEach((round, index) => {
@@ -13,12 +13,12 @@ function getBestScore() {
       i = index+1;
     }
   });
-  let tableBody = document
+  const tableBody = document
     .getElementById("bestRoundTable")
     .getElementsByTagName("tbody")[0];
 
   tableBody.innerHTML = "";
-  let row = tableBody.insertRow();
+  const row = tableBody.insertRow();
   row.insertCell(0).textContent = "⭐ " + i + " ⭐" ;
   row.insertCell(1).textContent = best.a;
   row.insertCell(2).textContent = best.b;
@@ -29,14 +29,14 @@ function getBestScore() {
 function displayRounds() {
   getBestScore();
   let rounds = getRounds();
-  let tableBody = document
+  const tableBody = document
     .getElementById("roundsTable")
     .getElementsByTagName("tbody")[0];
 
   tableBody.innerHTML = "";
 
   rounds.forEach((round, index) => {
-    let row = tableBody.insertRow();
+    const row = tableBody.insertRow();
     row.insertCell(0).textContent = index + 1;
     row.insertCell(1).textContent = round.a;
     row.insertCell(2).textContent = round.b;

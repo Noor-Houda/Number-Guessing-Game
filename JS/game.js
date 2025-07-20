@@ -70,7 +70,7 @@ function _restart() {
 /*-------------------------------------------------------*/
 
 function nb_aleatoire(min, max) {
-  let nb = min + (max - min + 1) * Math.random();
+  const nb = min + (max - min + 1) * Math.random();
   return Math.floor(nb);
 }
 
